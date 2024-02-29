@@ -30,11 +30,11 @@ body {
   background: #f0f0f0;
 }
 
-#Animales div div {
+#Animales section section {
   transition: all 200ms;
 }
 
-#Animales div >div:hover {
+#Animales section >section:hover {
   box-shadow: 0px 1px 5px 1px;
 }
 

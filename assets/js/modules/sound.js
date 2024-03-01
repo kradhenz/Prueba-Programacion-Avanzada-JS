@@ -1,6 +1,4 @@
-import Animal from './modules/animal.js'
-
-const player = document.getElementById("player");
+import Animal from './animal.js'
 
 class Leon extends Animal{
     constructor(name, age, img, comment, sound){
@@ -44,4 +42,4 @@ class Aguila extends Animal{
     }
 }
 
-export { Leon, Lobo, Oso, Serpiente, Aguila }; // Used to export the classes
+export { Leon, Lobo, Oso, Serpiente, Aguila };

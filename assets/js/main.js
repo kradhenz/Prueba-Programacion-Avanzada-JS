@@ -3,7 +3,7 @@ import dataAnimals from "./modules/source.js";
 
 // IIFE for main functionality
 
-(async function() {
+(async function () {
     const animals = [];
     const animalsSection = document.getElementById('Animals');
     const btnAdd = document.getElementById('btnAdd');
@@ -16,29 +16,32 @@ import dataAnimals from "./modules/source.js";
         const img = await getImage(name);
         const sound = await getSound(name);
 
-        let animal;
-        switch(name) {
-            case 'Leon':
-                animal = new Leon(name, age, img, comment, sound);
-                break;
-            case 'Lobo':
-                animal = new Lobo(name, age, img, comment, sound);
-                break;
-            case 'Oso':
-                animal = new Oso(name, age, img, comment, sound);
-                break;
-            case 'Serpiente':
-                animal = new Serpiente(name, age, img, comment, sound);
-                break;
-            case 'Aguila':
-                animal = new Aguila(name, age, img, comment, sound);
-                break;
-            default:
-                break;
+        if (name && age && comment) {
+            let animal;
+            switch (name) {
+                case 'Leon':
+                    animal = new Leon(name, age, img, comment, sound);
+                    break;
+                case 'Lobo':
+                    animal = new Lobo(name, age, img, comment, sound);
+                    break;
+                case 'Oso':
+                    animal = new Oso(name, age, img, comment, sound);
+                    break;
+                case 'Serpiente':
+                    animal = new Serpiente(name, age, img, comment, sound);
+                    break;
+                case 'Aguila':
+                    animal = new Aguila(name, age, img, comment, sound);
+                    break;
+                default:
+                    break;
+            }
+            animals.push(animal);
+            showAnimals();
+        } else {
+            alert("Por favor rellene todos los campos");
         }
-
-        animals.push(animal);
-        showAnimals();
     }
 
     async function getImage(name) {

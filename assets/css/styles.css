@@ -25,26 +25,25 @@ body {
 
 /* Tabla de Participantes */
 
-#Animales {
+#Animals {
   height: 100%;
   background: #f0f0f0;
 }
 
-#Animales section section {
+#Animals section section {
   transition: all 200ms;
 }
 
-#Animales section >section:hover {
+#Animals section>section:hover {
   box-shadow: 0px 1px 5px 1px;
 }
 
-.participante {
+/* .participante {
   max-width: 30%;
-}
+} */
 
 /* Modal */
 
-.modal-dialog{
-    max-width: 85% !important;
+.modal-dialog {
+  max-width: 85% !important;
 }
-

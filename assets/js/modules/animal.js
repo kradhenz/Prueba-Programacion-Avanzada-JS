@@ -22,8 +22,8 @@ class Animal {
     get comment() {
         return this._comment;
     }
-    set comment(comment) {
-        this._comment = comment;
+    set comment(newcomment) {
+        this._comment = newcomment;
     }
     // Getter & Setter for 'sound'
     get sound() {

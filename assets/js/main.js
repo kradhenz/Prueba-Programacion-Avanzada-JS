@@ -2,10 +2,24 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./modules/sound.js";
 import dataAnimals from "./modules/source.js";
 
 // IIFE for main functionality
-
 (async function () {
     const animals = [];
     const animalsSection = document.getElementById('Animals');
+    const animal = document.getElementById("animal");
+    const preview = document.getElementById('preview');
+
+    // Function to find image preview
+    animal.addEventListener("change", async () => {
+        const animalValue = animal.value;
+        const data = await dataAnimals.getData();
+
+        const result = data.find(
+            (animal) => animal.name == animalValue
+        );
+
+        preview.style.backgroundImage = `url(./assets/img/${result.image})`;
+    });
+
     const btnAdd = document.getElementById('btnAdd');
     btnAdd.addEventListener('click', addAnimal);
 
@@ -15,6 +29,7 @@ import dataAnimals from "./modules/source.js";
         const comment = document.getElementById('comment').value;
         const img = await getImage(name);
         const sound = await getSound(name);
+
 
         if (name && age && comment) {
             let animal;
@@ -45,14 +60,21 @@ import dataAnimals from "./modules/source.js";
     }
 
     async function getImage(name) {
-        const response = await fetch(`./assets/img/${name}.jpg`);
-        return response.ok ? name : '';
+        try {
+            const response = await fetch(`./assets/img/${name}.jpg`);
+            return response.ok ? name : '';
+        } catch (e) {
+            return '';
+        }
     }
     async function getSound(name) {
-        const response = await fetch(`./assets/sound/${name}.mp3`);
-        return response.ok ? name : '';
+        try {
+            const response = await fetch(`./assets/sound/${name}.mp3`);
+            return response.ok ? name : '';
+        } catch (e) {
+            return '';
+        }
     }
-
     function showAnimals() {
         animalsSection.innerHTML = '';
         animals.forEach(animal => {

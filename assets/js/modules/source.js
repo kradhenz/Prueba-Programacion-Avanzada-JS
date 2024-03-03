@@ -18,7 +18,7 @@ export default dataAnimals;
 const dataAnimals = (() => {
 
     const getData = async () => {
-        const response = await fetch("../../../animales.json");
+        const response = await fetch("./animals.json");
         const { animals } = await response.json();
 
         return animals;

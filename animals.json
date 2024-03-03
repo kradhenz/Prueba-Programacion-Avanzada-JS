@@ -1,0 +1,29 @@
+{
+  "animals": [
+    {
+      "name": "Leon",
+      "image": "Leon.jpg",
+      "sound": "Leon.mp3"
+    },
+    {
+      "name": "Lobo",
+      "image": "Lobo.jpg",
+      "sound": "Lobo.mp3"
+    },
+    {
+      "name": "Oso",
+      "image": "Oso.jpg",
+      "sound": "Oso.mp3"
+    },
+    {
+      "name": "Serpiente",
+      "image": "Serpiente.jpg",
+      "sound": "Serpiente.mp3"
+    },
+    {
+      "name": "Aguila",
+      "image": "Aguila.jpg",
+      "sound": "Aguila.mp3"
+    }
+  ]
+}

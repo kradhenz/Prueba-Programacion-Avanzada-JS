@@ -3,27 +3,27 @@
     {
       "name": "Leon",
       "image": "Leon.jpg",
-      "sound": "Leon.mp3"
+      "sound": "Rugido.mp3"
     },
     {
       "name": "Lobo",
       "image": "Lobo.jpg",
-      "sound": "Lobo.mp3"
+      "sound": "Aullido.mp3"
     },
     {
       "name": "Oso",
       "image": "Oso.jpg",
-      "sound": "Oso.mp3"
+      "sound": "Gruñido.mp3"
     },
     {
       "name": "Serpiente",
       "image": "Serpiente.jpg",
-      "sound": "Serpiente.mp3"
+      "sound": "Siseo.mp3"
     },
     {
       "name": "Aguila",
       "image": "Aguila.jpg",
-      "sound": "Aguila.mp3"
+      "sound": "Chillido.mp3"
     }
   ]
 }

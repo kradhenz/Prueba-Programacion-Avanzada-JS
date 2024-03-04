@@ -25,12 +25,12 @@ body {
 
 /* Tabla de Participantes */
 #Board {
-  width: 723px;
+  width: 750px;
   height: 625px;
 }
 
 #Form {
-  width: 400px;
+  width: 370px;
   height: 625px;
 }
 
@@ -52,12 +52,13 @@ body {
   height: 150px;
 }
 
-/* .participante {
-  max-width: 30%;
-} */
+#player {
+  width: 100%;
+}
+
 
 /* Modal */
 
-/* .modal-dialog {
+.modal-dialog {
   max-width: 85% !important;
-} */
+}

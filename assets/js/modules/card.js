@@ -7,13 +7,13 @@ const createCard = (function() {
                     <img height="200" width="200" src="${animal.img}"/>
                     <article>
                         <audio class="card-text" src="${animal.sound}"></audio>
-                        <button id="btnAudio" class="btn btn-secondary w-100">
+                        <button id="${animal.name}" class="btn btn-secondary w-100">
                             <img height="30" src="assets/img/audio.svg"/>
                         </button>
                     </article>
                 </article>
             </article>
-        `;
+        `; // >> REVISAR button id <<
     };
 })();
 

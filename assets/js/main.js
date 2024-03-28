@@ -20,6 +20,8 @@ animal.addEventListener('change', async () => {
         let comment = document.getElementById('comment').value;
         let sound = `./assets/sound/${result.sound}`;
 
+        console.log(`${name}, ${age}, ${comment},\n${img},\n${sound}`);
+
         if (name && age && comment) {
             const option = getInstance(name, age, img, comment, sound);
             let animalsSection = document.getElementById('Animals');
@@ -28,14 +30,22 @@ animal.addEventListener('change', async () => {
             animals.push(option);
             console.log(animals);
 
-            //animalsSection.innerHTML = "";
+            /* animalsSection.innerHTML = ""; // >> REVISAR <<
+
             animals.forEach(animal => {
-                animalsSection.innerHTML += createCard(animal, img, sound);
+                animalsSection.innerHTML += createCard(animal, option);
             });
-            //animalsSection.innerHTML = createCard(option);
+
+            /*
+            document.getElementById('animal').value = "Seleccione un animal";
+            document.getElementById('age').value = "Seleccione un rango de años";
+            document.getElementById('comment').value = "";
+            */
             
+            preview.style.backgroundImage = "";
+
             // Event for audio button
-            let btnAudio = document.getElementById('btnAudio');
+            let btnAudio = document.getElementById(`${name}`); // >> REVISAR << 
             btnAudio.addEventListener('click', async () => {
                 console.log('click');
                 if (name == 'Leon') {

@@ -30,7 +30,7 @@ animal.addEventListener('change', async () => {
             animals.push(option);
             console.log(animals);
 
-            // animalsSection.innerHTML = ""; // >> REVISAR <<
+            animalsSection.innerHTML = ""; // >> REVISAR <<
 
             animals.forEach(animal => {
                 animalsSection.innerHTML += createCard(animal, option);
